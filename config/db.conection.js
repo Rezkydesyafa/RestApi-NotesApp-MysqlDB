@@ -13,6 +13,6 @@ const db = new Sequelize(
 );
 db.authenticate()
   .then(() => console.log('koneksi sukses'))
-  .catch((e) => console.log(e));
+  .catch((e) => console.log('database error : ', e.original));
 
 module.exports = db;

@@ -3,7 +3,7 @@ exports.success = (payload, message, res) => {
     success: true,
     statusCode: res.statusCode,
     message,
-    payload,
+    payload: payload || null,
   };
   res.json(datas);
   res.end();
@@ -17,6 +17,7 @@ exports.error = (message, statusCode, res) => {
       message,
     },
   };
+  // console.log(data);
   res.json(data);
   res.end();
 };

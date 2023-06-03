@@ -10,6 +10,9 @@ const {
 
 const noteRoutes = express.Router();
 
+// noteRoutes.get('/', (req,res)=>{
+//   res.statusCode
+// });
 noteRoutes.get('/', getQueryNotes);
 noteRoutes.get('/', getAllNotes);
 noteRoutes.get('/:id', getAllNotesById);
